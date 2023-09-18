@@ -13,26 +13,23 @@ airports = {"EFHK": "Helsinki-Vantaa", "ESSA": "Arlandan lentoasema",
 airport = ""
 icao = ""
 search = ""
+question = "Komennot: NEW = Lisää lentokenttä, SEARCH = Etsi lentokenttää, END = lopeta ohjelma: "
 
-command = input("Syötä uuden lentoaseman tiedot komennolla NEW, hae olemassa olevan "
-                    "lentoaseman tiedot komennolla SEARCH, tai poistu komennolla END: ")
+command = input(question)
 while command != "END":
     if command == "NEW":
         icao = input("Syötä lentokentän icao koodi: ")
         airport = input("Syötä lentokentän nimi: ")
         airports[icao] = airport
-        command = input("Syötä uuden lentoaseman tiedot komennolla NEW, hae olemassa olevan "
-                        "lentoaseman tiedot komennolla SEARCH, tai poistu komennolla END: ")
+        command = input(question)
     if command == "SEARCH":
         search = input("Anna haluamasi lentokentän ICAO-koodi: ")
         if search in airports:
             print(f"Lentokentän nimi: {airports[search]}")
-            command = input("Syötä uuden lentoaseman tiedot komennolla NEW, hae olemassa olevan "
-                        "lentoaseman tiedot komennolla SEARCH, tai poistu komennolla END: ")
+            command = input(question)
         else:
             print("Hakua vastaavaa lentokenttää ei löytynyt.")
-            command = input("Syötä uuden lentoaseman tiedot komennolla NEW, hae olemassa olevan "
-                            "lentoaseman tiedot komennolla SEARCH, tai poistu komennolla END: ")
+            command = input(question)
 
 
 
