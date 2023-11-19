@@ -21,5 +21,3 @@ def get_icao(icao):
         return result
     else:
         return 'Not found'
-
-
