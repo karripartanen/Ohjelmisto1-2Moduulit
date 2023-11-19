@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-testi</title>
+    <script src="esim.js"></script>
+</head>
+<body>
+<h1>HEI HEI HEI HEI HEI</h1>
+
+<script>
+    'use strict';
+    //  kommentti
+
+    console.log('Moro maailma, terve bodysta');
+    //  alert('Helvetinmoinen alertti!');
+    const card = prompt('Anna pankkikorttisi numero: ');
+
+    console.log(card)
+
+    // string literal = merkkijono
+    const merkkijono = 'Your card number is: '+card;
+    console.log(merkkijono);
+
+    // template literal = muotoiltava lauseke
+    const muotoiltu = `Card number again: ${card}`
+    console.log(muotoiltu)
+
+    //  var, älä käytä jos ei ole pakko
+    //  ei näin:
+    //  var muuttujan voi määritellä useaan kertaan
+    //  hoisting eli käyttö ennen määritellyä mahdollista
+    var age = 12;
+    var age = 13;
+    //  console.log(age);
+
+    //  tämän takia strict ja const/let
+    let student = 'Karri';
+    let surname
+    surname = 'Partanen';
+    student = student + ' ' +surname;
+    console.log(student);
+
+
+    //  const/muuttumaton (constant) on muuttumaton, aiheuttaa virhee
+    const student2 = 'Pekka';
+    const surname2 = 'Kallio';
+    //  student2 = student2 + ' ' + surname2
+
+    const taulukko = [1,2,3,4,5,6,7,8,9,10];
+    console.log(taulukko);
+
+    taulukko[0] = 4;
+    console.log(taulukko);
+
+    // let-muuttujan tyyppiä voi vaihtaa lennossa
+    //  js on niin sanotusti loosely typed
+    let nameAgain = 'Karri';
+    console.log(typeof nameAgain, nameAgain)
+    nameAgain = 200;
+    console.log(typeof nameAgain, nameAgain)
+
+    // käytetään toString metodia
+    const ageStr = '13';
+    const age = ageStr.toString()
+    console.log(typeof age, age);
+
+    
+</script>
+</body>
+</html>
