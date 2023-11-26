@@ -10,19 +10,19 @@ function calc() {
   const value2 = parseFloat(num2.value);
   switch (userSelection.value) {
     case 'multi':
-      result.innerHTML = `${value1} * ${value2}`;
+      result.innerHTML = `${value1 * value2}`;
       break;
 
     case 'div':
-      result.innerHTML = `${value1} / ${value2}`;
+      result.innerHTML = `${value1 / value2}`;
       break;
 
     case 'add':
-      result.innerHTML = `${value1} + ${value2}`;
+      result.innerHTML = `${value1 + value2}`;
       break;
 
     case 'sub':
-      result.innerHTML = `${value1} - ${value2}`;
+      result.innerHTML = `${value1 - value2}`;
       break;
   }
 }
