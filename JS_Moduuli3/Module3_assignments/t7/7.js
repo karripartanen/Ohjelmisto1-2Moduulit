@@ -10,5 +10,5 @@ function mousesOver() {
 function mousesAway() {
   target.src = 'img/picA.jpg';
 }
-trigger.addEventListener('mouseover', mouseOver);
+trigger.addEventListener('mouseover', mousesOver);
 trigger.addEventListener('mouseout', mousesAway);
